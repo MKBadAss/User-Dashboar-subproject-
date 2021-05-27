@@ -32,3 +32,5 @@ $(".side-nav ul li").click(function(){
     closeMobileSide.addEventListener("click", () =>{
         navSideMobile.classList.remove("show")
     })
+
+/*dadadadaddada */
