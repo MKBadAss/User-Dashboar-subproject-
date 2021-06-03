@@ -3,7 +3,8 @@
      --color: #ff5252;
      --t-color: #575757;
      --d-c:#2d3436;
-     --c: #e9e9e9
+     --c: #e9e9e9;
+     --b:linear-gradient(to right, #1C6CED, #1FFBC5);;
  }
 
  *{
@@ -13,7 +14,7 @@
  }
  body{
      overflow-x: hidden;
-     background: url(img/Alty-Cleaning-Services-Featured-Image.jpg);
+     background: var(--b);
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;
@@ -230,7 +231,7 @@ aside .search button{
     height: 30px;
     line-height: 30px;
     font-size: 1em;
-    background-color: var(--color);
+   background: var(--color);
     border-radius: 5px;
     color: #fff;
     text-align: center;
@@ -278,8 +279,9 @@ aside .search button{
     display: none;
 }
 .main{
-    position: relative;
-    margin-left: 350px;
+    position: absolute;
+    left: 350px;
+    margin: 0;
 }
 .main section{
     width: 100%;
@@ -380,7 +382,7 @@ aside .search button{
         color: var(--t-color);
     }
     .nav-mobile ul li.active,.nav-mobile ul li:hover {
-        background-color: var(--color);
+        background: var(--b);
         color: #fff;
     }
     .nav-mobile ul li span{
@@ -455,7 +457,7 @@ aside .search button{
 /*User Info Div*/
 .wrapper
 {
- position: absolute;
+ position: relative;
  padding-right: 15px;
  overflow: hidden;
  display: flex;
