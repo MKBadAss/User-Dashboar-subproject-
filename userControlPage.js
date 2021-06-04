@@ -8,7 +8,7 @@ function show(panelIndex) {
     tabClicked[panelIndex].style.display = "block";
     navSideMobile.classList.remove("show")
 } 
-show(0);
+show(1);
 
 
 $(".side-nav ul li").click(function(){

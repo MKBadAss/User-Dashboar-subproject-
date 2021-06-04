@@ -18,6 +18,8 @@
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;
+     height: 100vh;
+
  }
  ul,li {
      list-style: none;
@@ -279,9 +281,11 @@ aside .search button{
     display: none;
 }
 .main{
-    position: absolute;
+    position: fixed;
     left: 350px;
-    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 .main section{
     width: 100%;
@@ -454,87 +458,156 @@ aside .search button{
 }
 
 
-/*User Info Div*/
-.wrapper
-{
- position: relative;
- padding-right: 15px;
- overflow: hidden;
- display: flex;
- box-shadow: 0 2px 25px rgba(69,90,10,0.2);
- box-sizing: border-box;
- left: 25%;
- margin-top: 50px;
-}
+/*User Info*/
+.user-info-tab{
+    width: 500px;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-left: 35px;
+    font-size: 1em;
+    padding: 0 auto;
 
-.wrapper .right{
     
-    border-radius: 10px;
-    padding: 30px 20px;
-    background-color: #fff;
-    display: flex;
+}
+.info{
+    display: inline-flex;
+    border-bottom: 1px solid #1C6CED;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.info span{
+    
     vertical-align: middle;
+    line-height: 23px;
+    color: #797979;
     
-}
-.wrapper .right .info-data .data{
-    
-    padding: 15px 0px;
-    border-bottom: 1px solid #575757;
-    display: flex;
-}
-.wrapper .right .info-data .data:last-child{
-    border: none;
-}
-.wrapper .right .info-data .data h4{
-    margin-right: 20px;
-    
-}
-.wrapper .right .info-data .data p{
-    color: #919aa3;
-    font-weight: 500;
-    font-size: 0.7em;
-    line-height: 20px;
 
 }
-.wrapper .right .info-data button {
+.info h3{
+    margin-right: 20px;
+    margin-left: 20px;
+ 
+}
+
+/*Update info form*/
+.form-container {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 70px;
+    font-size: 16px;
+
+}
+.form-tittle {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 1.5em;
+
+}
+.form-tittle::before{
+    content: "";
+    height: 3px;
+    width: 140px;
+    background: var(--b);
+    top:65px;
+    position: absolute;
+}
+.form-content {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-input{
+    width: calc(100%/2);
+    padding:0 15px;
+    margin-bottom: 15px;
+}
+.form-input span{
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+.form-input input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 1em;
+}
+.form-input input:focus,.form-input input:valid {
+    border-color:#1C6CED ;
+    border-bottom-width: 2px;
+}
+.checkbox {
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.checkbox-tittle {
+    display: inline-flex;
+    font-size: 1.2em;
+    padding-left: 5px;
+}
+.option-list{
+    padding: 10px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+.option-list label {
+    cursor: pointer;
+    align-items: center;
+    display: inline-flex;
+}
+.dot {
+    content: "";
+    width:1em;
+    height: 1em;
+    background: #ccc;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+#radio-1:checked~ .option-list .radio-1,
+#radio-2:checked~ .option-list .radio-2,
+#radio-3:checked~ .option-list .radio-3 {
+    background-color: #1C6CED;
+}
+.checkbox input {
+    display: none;
+}
+.form-submit {
+    text-align: center;
+    align-items: center;
+}
+.form-submit input {
+    width: 50%;
+    font-size: 1.4em;
     text-align: center;
     padding: 10px;
-    color: #575757;
-    border-radius: 10px;
     border: none;
-    margin-top:20px;
-    margin-left: 150px;
+    border-radius: 15px;
+    background: var(--b);
+    opacity: 0.7;
+    transition: all 300ms ease;
     cursor: pointer;
-    font-family: "Roboto",sans-serif;
-    text-transform: uppercase;
-    background-color: #ff5252;
-    color: #fff;
-    opacity: 0.8;
-    
+    font-weight: bolder;
 }
-.wrapper .right .info-data button:hover{
+.form-submit input:hover{
     opacity: 1;
-}
-
-
-/*User Update Info*/
-
-.update .right .info-data .data input {
-    color: #919aa3;
-    font-weight: 500;
-    font-size: 0.7em;
-    line-height: 20px;
-    border: none;
-    width: 100%;
-    display: inline;
-    position: relative;
-    
-}
-.update .right .info-data .data input:hover{
-    cursor: pointer;
-    border: 1px solid #919aa3;
-}
-.update .right .info-data .data h4{
-    width: 100%;
- 
 }
